@@ -1,0 +1,1359 @@
+{
+  "Pdus": [
+    {
+      "Id": 264,
+      "Name": "RearDriveTorqueRPM",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "RearTorqueActual",
+            "SignalType": "Signed",
+            "BitPos": 27,
+            "BitSize": 13,
+            "Factor": 2.0,
+            "Offset": 0.0,
+            "Minimum": -7500.0,
+            "Maximum": 7500.0,
+            "Unit": "NM"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "RearAxleRPM",
+            "SignalType": "Signed",
+            "BitPos": 40,
+            "BitSize": 16,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": -2750.0,
+            "Maximum": 2750.0,
+            "Unit": "RPM"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 280,
+      "Name": "DriveSystemStatus",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "BrakePedal",
+            "SignalType": "Unsigned",
+            "BitPos": 19,
+            "BitSize": 2,
+            "Factor": 1.0,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 3.0,
+            "Unit": ""
+          }
+        },
+        {
+          "Signal": {
+            "Name": "PedalPosition",
+            "SignalType": "Unsigned",
+            "BitPos": 32,
+            "BitSize": 8,
+            "Factor": 0.4,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 100.0,
+            "Unit": "%",
+            "TeslaloggerDbKey": 404
+          }
+        }
+      ]
+    },
+    {
+      "Id": 297,
+      "Name": "SteeringAngle",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "SteeringAngle",
+            "SignalType": "Unsigned",
+            "BitPos": 16,
+            "BitSize": 14,
+            "Factor": 0.1,
+            "Offset": -819.2,
+            "Minimum": -819.2,
+            "Maximum": 819.1,
+            "Unit": "Deg"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "SteeringSpeed",
+            "SignalType": "Unsigned",
+            "BitPos": 32,
+            "BitSize": 14,
+            "Factor": 0.5,
+            "Offset": -4096.0,
+            "Minimum": -4096.0,
+            "Maximum": 4095.5,
+            "Unit": "D/S"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 306,
+      "Name": "HVBattAmpVolt",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "BattVoltage",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 16,
+            "Factor": 0.01,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 655.35,
+            "Unit": "V",
+            "TeslaloggerDbKey": 30
+          }
+        },
+        {
+          "Signal": {
+            "Name": "SmoothBattCurrent",
+            "SignalType": "Signed",
+            "BitPos": 16,
+            "BitSize": 16,
+            "Factor": -0.1,
+            "Offset": 0.0,
+            "Minimum": -3276.7,
+            "Maximum": 3276.7,
+            "Unit": "A",
+            "TeslaloggerDbKey": 44
+          }
+        }
+      ]
+    },
+    {
+      "Id": 390,
+      "Name": "FrontDriveTorqueRPM",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "FrontTorqueActual",
+            "SignalType": "Signed",
+            "BitPos": 27,
+            "BitSize": 13,
+            "Factor": 2.0,
+            "Offset": 0.0,
+            "Minimum": -8192.0,
+            "Maximum": 8190.0,
+            "Unit": "NM"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "FrontAxleRPM",
+            "SignalType": "Signed",
+            "BitPos": 40,
+            "BitSize": 16,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": -3276.8,
+            "Maximum": 3276.7,
+            "Unit": "RPM"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 469,
+      "Name": "FrontTorque",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "FrontTorque",
+            "SignalType": "Signed",
+            "BitPos": 24,
+            "BitSize": 13,
+            "Factor": 0.25,
+            "Offset": 0.0,
+            "Minimum": -1024.0,
+            "Maximum": 1023.75,
+            "Unit": "NM",
+            "TeslaloggerDbKey": 400
+          }
+        }
+      ]
+    },
+    {
+      "Id": 472,
+      "Name": "RearTorque",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "RearTorque",
+            "SignalType": "Signed",
+            "BitPos": 24,
+            "BitSize": 13,
+            "Factor": 0.25,
+            "Offset": 0.0,
+            "Minimum": -1024.0,
+            "Maximum": 1023.75,
+            "Unit": "NM",
+            "TeslaloggerDbKey": 403
+          }
+        }
+      ]
+    },
+    {
+      "Id": 524,
+      "Name": "VCRighthvacRequest",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "VCRighthvacEvapEnabled",
+            "SignalType": "Unsigned",
+            "BitPos": 11,
+            "BitSize": 1,
+            "Factor": 1.0,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 1.0,
+            "Unit": ""
+          }
+        },
+        {
+          "Signal": {
+            "Name": "VCRighttempEvaporator",
+            "SignalType": "Unsigned",
+            "BitPos": 13,
+            "BitSize": 11,
+            "Factor": 0.1,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 164.7,
+            "Unit": "C"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "VCRighttempEvaporatorTarget",
+            "SignalType": "Unsigned",
+            "BitPos": 24,
+            "BitSize": 8,
+            "Factor": 0.2,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 51.0,
+            "Unit": "C"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "VCRighthvacBlowerSpeedRPMReq",
+            "SignalType": "Unsigned",
+            "BitPos": 32,
+            "BitSize": 10,
+            "Factor": 5.0,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 5115.0,
+            "Unit": "RPM"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 530,
+      "Name": "BMS_status",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "BMS_minPackTemperature",
+            "SignalType": "Unsigned",
+            "BitPos": 56,
+            "BitSize": 8,
+            "Factor": 0.5,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 87.5,
+            "Unit": "C"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 577,
+      "Name": "VCFRONT_coolant",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "VCFRONT_coolantFlowBatActual",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 9,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 40.0,
+            "Unit": "LPM",
+            "TeslaloggerDbKey": 445
+          }
+        },
+        {
+          "Signal": {
+            "Name": "VCFRONT_coolantFlowPTActual",
+            "SignalType": "Unsigned",
+            "BitPos": 22,
+            "BitSize": 9,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 40.0,
+            "Unit": "LPM",
+            "TeslaloggerDbKey": 444
+          }
+        }
+      ]
+    },
+    {
+      "Id": 594,
+      "Name": "BMS_powerAvailable",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "BMS_maxRegenPower",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 16,
+            "Factor": 0.01,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 655.35,
+            "Unit": "kW"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "BMS_maxDischargePower",
+            "SignalType": "Unsigned",
+            "BitPos": 16,
+            "BitSize": 16,
+            "Factor": 0.01,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 655.35,
+            "Unit": "kW",
+            "TeslaloggerDbKey": 29
+          }
+        }
+      ]
+    },
+    {
+      "Id": 599,
+      "Name": "UIspeed",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "UIspeed_signed",
+            "SignalType": "Unsigned",
+            "BitPos": 12,
+            "BitSize": 12,
+            "Factor": 0.08,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 287.6,
+            "Unit": "KPH",
+            "TeslaloggerDbKey": 442
+          }
+        }
+      ]
+    },
+    {
+      "Id": 609,
+      "Name": "_12vBattStatus",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "v12vBattVoltage",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 12,
+            "Factor": 0.0054436801001429558,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 22.29185362131,
+            "Unit": "V"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "v12vBattTemp",
+            "SignalType": "Signed",
+            "BitPos": 16,
+            "BitSize": 16,
+            "Factor": 0.01,
+            "Offset": 0.0,
+            "Minimum": -327.68,
+            "Maximum": 327.67,
+            "Unit": "C"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "v12vBattAH",
+            "SignalType": "Signed",
+            "BitPos": 32,
+            "BitSize": 14,
+            "Factor": 0.01,
+            "Offset": 0.0,
+            "Minimum": -81.92,
+            "Maximum": 81.91,
+            "Unit": "AH"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "v12vBattCurrent",
+            "SignalType": "Signed",
+            "BitPos": 48,
+            "BitSize": 16,
+            "Factor": 0.005,
+            "Offset": 0.0,
+            "Minimum": -163.84,
+            "Maximum": 163.835,
+            "Unit": "A"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 614,
+      "Name": "RearInverterPower",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "RearPower",
+            "SignalType": "Signed",
+            "BitPos": 0,
+            "BitSize": 11,
+            "Factor": 0.5,
+            "Offset": 0.0,
+            "Minimum": -500.0,
+            "Maximum": 500.0,
+            "Unit": "kW",
+            "TeslaloggerDbKey": 415
+          }
+        }
+      ]
+    },
+    {
+      "Id": 658,
+      "Name": "BMS_SOC",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "SOCmin",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 10,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 102.3,
+            "Unit": "%",
+            "TeslaloggerDbKey": 25
+          }
+        },
+        {
+          "Signal": {
+            "Name": "SOCUI",
+            "SignalType": "Unsigned",
+            "BitPos": 10,
+            "BitSize": 10,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 102.3,
+            "Unit": "%",
+            "TeslaloggerDbKey": 24
+          }
+        },
+        {
+          "Signal": {
+            "Name": "SOCmax",
+            "SignalType": "Unsigned",
+            "BitPos": 20,
+            "BitSize": 10,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 102.3,
+            "Unit": "%"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "SOCave",
+            "SignalType": "Unsigned",
+            "BitPos": 30,
+            "BitSize": 10,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 102.3,
+            "Unit": "%"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 705,
+      "Name": "VCFront10hz",
+      "SignalOrMuxes": [
+        {
+          "Multiplex": {
+            "SignalName": "VCFront10HzIndex",
+            "SignalValue": 1,
+            "Signals": [
+              {
+                "Name": "VCfrontradiatorFanRPMTarget",
+                "SignalType": "Unsigned",
+                "BitPos": 16,
+                "BitSize": 10,
+                "Factor": 10.0,
+                "Offset": 0.0,
+                "Minimum": 0.0,
+                "Maximum": 0.0,
+                "Unit": "rpm"
+              }
+            ]
+          }
+        },
+        {
+          "Multiplex": {
+            "SignalName": "VCFront10HzIndex",
+            "SignalValue": 2,
+            "Signals": [
+              {
+                "Name": "VCfrontfiveWayValveAngleActual",
+                "SignalType": "Unsigned",
+                "BitPos": 6,
+                "BitSize": 10,
+                "Factor": 0.25,
+                "Offset": -70.0,
+                "Minimum": 0.0,
+                "Maximum": 0.0,
+                "Unit": "deg"
+              }
+            ]
+          }
+        },
+        {
+          "Signal": {
+            "Name": "VCFront10HzIndex",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 3,
+            "Factor": 1.0,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 7.0,
+            "Unit": ""
+          }
+        }
+      ]
+    },
+    {
+      "Id": 722,
+      "Name": "BMSVAlimits",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "MinVoltage",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 16,
+            "Factor": 0.01,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 655.35,
+            "Unit": "V"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "MaxVoltage",
+            "SignalType": "Unsigned",
+            "BitPos": 16,
+            "BitSize": 16,
+            "Factor": 0.01,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 655.35,
+            "Unit": "V"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "MaxChargeCurrent",
+            "SignalType": "Unsigned",
+            "BitPos": 32,
+            "BitSize": 14,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 1638.3,
+            "Unit": "A"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "MaxDischargeCurrent",
+            "SignalType": "Unsigned",
+            "BitPos": 48,
+            "BitSize": 14,
+            "Factor": 0.128,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 2097.024,
+            "Unit": "A"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 741,
+      "Name": "FrontInverterPower",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "FrontPower",
+            "SignalType": "Signed",
+            "BitPos": 0,
+            "BitSize": 11,
+            "Factor": 0.5,
+            "Offset": 0.0,
+            "Minimum": -512.0,
+            "Maximum": 511.5,
+            "Unit": "kW",
+            "TeslaloggerDbKey": 405
+          }
+        }
+      ]
+    },
+    {
+      "Id": 789,
+      "Name": "RearInverterTemps",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "RearTempInvPCB",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 8,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 215.0,
+            "Unit": "C"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "RearTempInverter",
+            "SignalType": "Unsigned",
+            "BitPos": 8,
+            "BitSize": 8,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 215.0,
+            "Unit": "C"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "RearTempStator",
+            "SignalType": "Unsigned",
+            "BitPos": 16,
+            "BitSize": 8,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 215.0,
+            "Unit": "C",
+            "TeslaloggerDbKey": 429
+          }
+        },
+        {
+          "Signal": {
+            "Name": "RearTempInvHeatsink",
+            "SignalType": "Unsigned",
+            "BitPos": 32,
+            "BitSize": 8,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 215.0,
+            "Unit": "C"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 801,
+      "Name": "VCFRONT_sensors",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "VCFRONT_tempCoolantBatInlet",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 10,
+            "Factor": 0.125,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 85.0,
+            "Unit": "C",
+            "TeslaloggerDbKey": 64
+          }
+        },
+        {
+          "Signal": {
+            "Name": "VCFRONT_tempCoolantPTInlet",
+            "SignalType": "Unsigned",
+            "BitPos": 10,
+            "BitSize": 11,
+            "Factor": 0.125,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 200.0,
+            "Unit": "C",
+            "TeslaloggerDbKey": 80
+          }
+        },
+        {
+          "Signal": {
+            "Name": "VCFRONT_tempAmbient",
+            "SignalType": "Unsigned",
+            "BitPos": 24,
+            "BitSize": 8,
+            "Factor": 0.5,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 80.0,
+            "Unit": "C",
+            "TeslaloggerDbKey": 61
+          }
+        },
+        {
+          "Signal": {
+            "Name": "VCFRONT_tempAmbientFiltered",
+            "SignalType": "Unsigned",
+            "BitPos": 40,
+            "BitSize": 8,
+            "Factor": 0.5,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 80.0,
+            "Unit": "C",
+            "TeslaloggerDbKey": 59
+          }
+        }
+      ]
+    },
+    {
+      "Id": 818,
+      "Name": "BattCellMinMax",
+      "SignalOrMuxes": [
+        {
+          "Multiplex": {
+            "SignalName": "BattCellMultiplexer",
+            "SignalValue": 0,
+            "Signals": [
+              {
+                "Name": "BattCellTempMax",
+                "SignalType": "Unsigned",
+                "BitPos": 16,
+                "BitSize": 8,
+                "Factor": 0.5,
+                "Offset": -40.0,
+                "Minimum": 0.0,
+                "Maximum": 0.0,
+                "Unit": "C",
+                "TeslaloggerDbKey": 3
+              },
+              {
+                "Name": "BattCellTempMin",
+                "SignalType": "Unsigned",
+                "BitPos": 24,
+                "BitSize": 8,
+                "Factor": 0.5,
+                "Offset": -40.0,
+                "Minimum": 0.0,
+                "Maximum": 0.0,
+                "Unit": "C",
+                "TeslaloggerDbKey": 1
+              }
+            ]
+          }
+        },
+        {
+          "Multiplex": {
+            "SignalName": "BattCellMultiplexer",
+            "SignalValue": 1,
+            "Signals": [
+              {
+                "Name": "BattCellBrickVoltageMax",
+                "SignalType": "Unsigned",
+                "BitPos": 2,
+                "BitSize": 12,
+                "Factor": 0.002,
+                "Offset": 0.0,
+                "Minimum": 0.0,
+                "Maximum": 0.0,
+                "Unit": "V",
+                "TeslaloggerDbKey": 7
+              },
+              {
+                "Name": "BattCellBrickVoltageMin",
+                "SignalType": "Unsigned",
+                "BitPos": 16,
+                "BitSize": 12,
+                "Factor": 0.002,
+                "Offset": 0.0,
+                "Minimum": 0.0,
+                "Maximum": 0.0,
+                "Unit": "V",
+                "TeslaloggerDbKey": 5
+              }
+            ]
+          }
+        },
+        {
+          "Signal": {
+            "Name": "BattCellMultiplexer",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 2,
+            "Factor": 1.0,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 0.0,
+            "Unit": ""
+          }
+        }
+      ]
+    },
+    {
+      "Id": 850,
+      "Name": "BMSenergy",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "BfullKWhNom",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 10,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 102.3,
+            "Unit": "kWh",
+            "TeslaloggerDbKey": 71
+          }
+        },
+        {
+          "Signal": {
+            "Name": "BremainingKWhNom",
+            "SignalType": "Unsigned",
+            "BitPos": 10,
+            "BitSize": 10,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 102.3,
+            "Unit": "kWh",
+            "TeslaloggerDbKey": 72
+          }
+        },
+        {
+          "Signal": {
+            "Name": "BexpectedremainKWh",
+            "SignalType": "Unsigned",
+            "BitPos": 20,
+            "BitSize": 10,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 102.3,
+            "Unit": "kWh",
+            "TeslaloggerDbKey": 74
+          }
+        },
+        {
+          "Signal": {
+            "Name": "BidealremainKWh",
+            "SignalType": "Unsigned",
+            "BitPos": 30,
+            "BitSize": 10,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 102.3,
+            "Unit": "kWh",
+            "TeslaloggerDbKey": 75
+          }
+        },
+        {
+          "Signal": {
+            "Name": "BbufferKWh",
+            "SignalType": "Unsigned",
+            "BitPos": 50,
+            "BitSize": 8,
+            "Factor": 0.1,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 25.5,
+            "Unit": "kWh",
+            "TeslaloggerDbKey": 87
+          }
+        }
+      ]
+    },
+    {
+      "Id": 886,
+      "Name": "FrontInverterTemps",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "TempInvPCB",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 8,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 215.0,
+            "Unit": "C"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "TempInverter",
+            "SignalType": "Unsigned",
+            "BitPos": 8,
+            "BitSize": 8,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 215.0,
+            "Unit": "C"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "TempStator",
+            "SignalType": "Unsigned",
+            "BitPos": 16,
+            "BitSize": 8,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 215.0,
+            "Unit": "C",
+            "TeslaloggerDbKey": 443
+          }
+        },
+        {
+          "Signal": {
+            "Name": "TempInvHeatsink",
+            "SignalType": "Unsigned",
+            "BitPos": 32,
+            "BitSize": 8,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": -40.0,
+            "Maximum": 215.0,
+            "Unit": "C"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 897,
+      "Name": "VCFRONT_logging1Hz",
+      "SignalOrMuxes": [
+        {
+          "Multiplex": {
+            "SignalName": "VCFRONT_logging1HzIndex",
+            "SignalValue": 0,
+            "Signals": [
+              {
+                "Name": "VCFRONT_targetPTActiveCool",
+                "SignalType": "Unsigned",
+                "BitPos": 16,
+                "BitSize": 8,
+                "Factor": 1.0,
+                "Offset": -40.0,
+                "Minimum": -40.0,
+                "Maximum": 120.0,
+                "Unit": "C"
+              },
+              {
+                "Name": "VCFRONT_targetPTPassive",
+                "SignalType": "Unsigned",
+                "BitPos": 24,
+                "BitSize": 8,
+                "Factor": 1.0,
+                "Offset": -40.0,
+                "Minimum": -40.0,
+                "Maximum": 120.0,
+                "Unit": "C"
+              },
+              {
+                "Name": "VCFRONT_targetBatActiveCool",
+                "SignalType": "Unsigned",
+                "BitPos": 32,
+                "BitSize": 7,
+                "Factor": 1.0,
+                "Offset": 0.0,
+                "Minimum": 0.0,
+                "Maximum": 100.0,
+                "Unit": "C"
+              },
+              {
+                "Name": "VCFRONT_targetBatPassive",
+                "SignalType": "Unsigned",
+                "BitPos": 40,
+                "BitSize": 7,
+                "Factor": 1.0,
+                "Offset": -20.0,
+                "Minimum": -20.0,
+                "Maximum": 80.0,
+                "Unit": "C"
+              },
+              {
+                "Name": "VCFRONT_targetBatActiveHeat",
+                "SignalType": "Unsigned",
+                "BitPos": 48,
+                "BitSize": 7,
+                "Factor": 1.0,
+                "Offset": -40.0,
+                "Minimum": -40.0,
+                "Maximum": 60.0,
+                "Unit": "C"
+              }
+            ]
+          }
+        },
+        {
+          "Multiplex": {
+            "SignalName": "VCFRONT_logging1HzIndex",
+            "SignalValue": 2,
+            "Signals": [
+              {
+                "Name": "VCFRONT_fiveWayValveRadBypass",
+                "SignalType": "Unsigned",
+                "BitPos": 56,
+                "BitSize": 7,
+                "Factor": 1.0,
+                "Offset": 0.0,
+                "Minimum": 0.0,
+                "Maximum": 100.0,
+                "Unit": "%",
+                "TeslaloggerDbKey": 69
+              }
+            ]
+          }
+        },
+        {
+          "Signal": {
+            "Name": "VCFRONT_logging1HzIndex",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 4,
+            "Factor": 1.0,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 11.0,
+            "Unit": ""
+          }
+        }
+      ]
+    },
+    {
+      "Id": 917,
+      "Name": "RearOilPump",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "RearOilFlowActual",
+            "SignalType": "Unsigned",
+            "BitPos": 16,
+            "BitSize": 8,
+            "Factor": 0.06,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 15.0,
+            "Unit": "LPM"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "RearOilPumpFluidTemp",
+            "SignalType": "Unsigned",
+            "BitPos": 24,
+            "BitSize": 8,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": 0.0,
+            "Maximum": 214.0,
+            "Unit": "C"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 918,
+      "Name": "FrontOilPump",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "FrontOilFlowActual",
+            "SignalType": "Unsigned",
+            "BitPos": 16,
+            "BitSize": 8,
+            "Factor": 0.06,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 15.0,
+            "Unit": "LPM"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "FrontOilPumpFluidTemp",
+            "SignalType": "Unsigned",
+            "BitPos": 24,
+            "BitSize": 8,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": 0.0,
+            "Maximum": 214.0,
+            "Unit": "C"
+          }
+        }
+      ]
+    },
+    {
+      "Id": 950,
+      "Name": "odometer",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "Odometer",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 32,
+            "Factor": 0.001,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 4294967.294,
+            "Unit": "KM",
+            "TeslaloggerDbKey": 26
+          }
+        }
+      ]
+    },
+    {
+      "Id": 978,
+      "Name": "TotalChargeDischarge",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "TotalDischargeKWh",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 32,
+            "Factor": 0.001,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 4294967.295,
+            "Unit": "kWh",
+            "TeslaloggerDbKey": 20
+          }
+        },
+        {
+          "Signal": {
+            "Name": "TotalChargeKWh",
+            "SignalType": "Unsigned",
+            "BitPos": 32,
+            "BitSize": 32,
+            "Factor": 0.001,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 4294967.295,
+            "Unit": "kWh",
+            "TeslaloggerDbKey": 13
+          }
+        }
+      ]
+    },
+    {
+      "Id": 1010,
+      "Name": "BMSCounters",
+      "SignalOrMuxes": [
+        {
+          "Multiplex": {
+            "SignalName": "BMSCountersIndex",
+            "SignalValue": 0,
+            "Signals": [
+              {
+                "Name": "BMStotalACcharge",
+                "SignalType": "Unsigned",
+                "BitPos": 8,
+                "BitSize": 32,
+                "Factor": 0.001,
+                "Offset": 0.0,
+                "Minimum": 0.0,
+                "Maximum": 4294967.295,
+                "Unit": "KWh",
+                "TeslaloggerDbKey": 9
+              }
+            ]
+          }
+        },
+        {
+          "Multiplex": {
+            "SignalName": "BMSCountersIndex",
+            "SignalValue": 1,
+            "Signals": [
+              {
+                "Name": "BMStotalDCcharge",
+                "SignalType": "Unsigned",
+                "BitPos": 8,
+                "BitSize": 32,
+                "Factor": 0.001,
+                "Offset": 0.0,
+                "Minimum": 0.0,
+                "Maximum": 4294967.295,
+                "Unit": "KWh",
+                "TeslaloggerDbKey": 11
+              }
+            ]
+          }
+        },
+        {
+          "Multiplex": {
+            "SignalName": "BMSCountersIndex",
+            "SignalValue": 2,
+            "Signals": [
+              {
+                "Name": "BMStotalRegenCharge",
+                "SignalType": "Unsigned",
+                "BitPos": 8,
+                "BitSize": 32,
+                "Factor": 0.001,
+                "Offset": 0.0,
+                "Minimum": 0.0,
+                "Maximum": 4294967.295,
+                "Unit": "KWh",
+                "TeslaloggerDbKey": 16
+              }
+            ]
+          }
+        },
+        {
+          "Multiplex": {
+            "SignalName": "BMSCountersIndex",
+            "SignalValue": 3,
+            "Signals": [
+              {
+                "Name": "BMStotalDriveDischarge",
+                "SignalType": "Unsigned",
+                "BitPos": 8,
+                "BitSize": 32,
+                "Factor": 0.001,
+                "Offset": 0.0,
+                "Minimum": 0.0,
+                "Maximum": 4294967.295,
+                "Unit": "KWh"
+              }
+            ]
+          }
+        },
+        {
+          "Signal": {
+            "Name": "BMSCountersIndex",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 3,
+            "Factor": 1.0,
+            "Offset": 0.0,
+            "Minimum": 0.0,
+            "Maximum": 0.0,
+            "Unit": ""
+          }
+        }
+      ]
+    },
+    {
+      "Id": 1022,
+      "Name": "brakeTemps",
+      "SignalOrMuxes": [
+        {
+          "Signal": {
+            "Name": "BrakeTempFL",
+            "SignalType": "Unsigned",
+            "BitPos": 0,
+            "BitSize": 10,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": 0.0,
+            "Maximum": 0.0,
+            "Unit": "C"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "BrakeTempFR",
+            "SignalType": "Unsigned",
+            "BitPos": 10,
+            "BitSize": 10,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": 0.0,
+            "Maximum": 0.0,
+            "Unit": "C"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "BrakeTempRL",
+            "SignalType": "Unsigned",
+            "BitPos": 20,
+            "BitSize": 10,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": 0.0,
+            "Maximum": 0.0,
+            "Unit": "C"
+          }
+        },
+        {
+          "Signal": {
+            "Name": "BrakeTempRR",
+            "SignalType": "Unsigned",
+            "BitPos": 30,
+            "BitSize": 10,
+            "Factor": 1.0,
+            "Offset": -40.0,
+            "Minimum": 0.0,
+            "Maximum": 0.0,
+            "Unit": "C"
+          }
+        }
+      ]
+    }
+  ]
+}
