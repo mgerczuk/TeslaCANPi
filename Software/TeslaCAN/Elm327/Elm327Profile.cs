@@ -30,6 +30,7 @@ using TeslaCAN.SocketCAN;
 
 namespace TeslaCAN.Elm327
 {
+    // Really simple ELM327 emulation. Just good enough to make ScanMyTesla work...
     public class Elm327Profile : Profile1
     {
         private readonly Dictionary<uint, DownSampler> downSampler = new Dictionary<uint, DownSampler>();

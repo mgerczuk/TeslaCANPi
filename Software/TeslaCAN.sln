@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.BlueZ", "Mono.BlueZ\Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.BlueZ.DBus", "Mono.BlueZ\Mono.BlueZ.DBus\Mono.BlueZ.DBus.csproj", "{68E6EB3B-4076-48F6-9EB6-1181057C0977}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeslaCANTests", "TeslaCANTests\TeslaCANTests.csproj", "{F3794E8D-8387-4B63-B0EE-14F6B0DDA4CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{68E6EB3B-4076-48F6-9EB6-1181057C0977}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68E6EB3B-4076-48F6-9EB6-1181057C0977}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68E6EB3B-4076-48F6-9EB6-1181057C0977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3794E8D-8387-4B63-B0EE-14F6B0DDA4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3794E8D-8387-4B63-B0EE-14F6B0DDA4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3794E8D-8387-4B63-B0EE-14F6B0DDA4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3794E8D-8387-4B63-B0EE-14F6B0DDA4CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
