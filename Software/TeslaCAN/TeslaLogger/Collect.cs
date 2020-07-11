@@ -23,6 +23,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using ICSharpCode.SharpZipLib.Zip;
 using Mono.Unix.Native;
 using Newtonsoft.Json;
 using TeslaCAN.SocketCAN;
@@ -155,6 +156,25 @@ namespace TeslaCAN.TeslaLogger
                                     context.Response.OutputStream.Write(buffer, 0, buffer.Length);
                                     context.Response.OutputStream.Close();
                                 }
+                                else if (context.Request.Url.AbsolutePath == "/update" &&
+                                         context.Request.HttpMethod == "GET")
+                                {
+                                    var result = "Ok";
+                                    try
+                                    {
+                                        Update();
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        Console.WriteLine(e);
+                                        result = e.ToString();
+                                    }
+
+                                    var buffer = Encoding.UTF8.GetBytes(result);
+                                    context.Response.ContentLength64 = buffer.Length;
+                                    context.Response.OutputStream.Write(buffer, 0, buffer.Length);
+                                    context.Response.OutputStream.Close();
+                                }
                                 else
                                 {
                                     context.Response.StatusCode = 404;
@@ -181,6 +201,22 @@ namespace TeslaCAN.TeslaLogger
                 Console.WriteLine(e);
                 throw;
             }
+        }
+
+        private void Update()
+        {
+            var homePath = Environment.GetEnvironmentVariable("HOME");
+            var zipPath = Path.Combine(homePath, "Release.zip");
+
+            using (var client = new WebClient())
+            {
+                client.DownloadFile(
+                    "https://gitlab.fritz.box/root/teslacan/raw/master/Software/TeslaCAN/Release.zip",
+                    zipPath);
+            }
+
+            var installPath = Path.Combine(homePath, "TeslaCAN");
+            new FastZip().ExtractZip(zipPath, installPath, "");
         }
     }
 }
