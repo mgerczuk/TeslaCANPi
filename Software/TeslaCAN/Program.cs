@@ -33,8 +33,13 @@ namespace TeslaCAN
             Syslog.Init("TeslaCAN", 0, SyslogFacility.LOG_DAEMON);
             Syslog.Info.WriteLine("started");
 
-            var collector = new Collect();
+            var database = new Database();
+            database.OpenDatabase();
+
+            var collector = new Collect(database);
             collector.Start();
+            var http = new HttpServer(database);
+            http.Start();
             var bluetooth = new Elm327Bluetooth();
             bluetooth.Start();
 
@@ -45,7 +50,9 @@ namespace TeslaCAN
                     signal.WaitOne();
 
                     collector.Stop();
+                    http.Stop();
                     bluetooth.Stop();
+                    database.CloseDatabase();
                 });
 
             signalHandlerThread.Start();

@@ -70,6 +70,7 @@
     <Compile Include="TeslaLogger\Collect.cs" />
     <Compile Include="TeslaLogger\Database.cs" />
     <Compile Include="TeslaLogger\DbId.cs" />
+    <Compile Include="TeslaLogger\HttpServer.cs" />
     <Compile Include="TeslaLogger\Sampler.cs" />
     <Compile Include="TeslaLogger\ValueBase.cs" />
     <Compile Include="TeslaLogger\ValueInt.cs" />
