@@ -27,13 +27,13 @@ namespace TeslaCAN.TeslaLogger
     internal class Sampler
     {
         private const long TicksPerSecond = 10000000L;
-        internal const long TicksPer10Sec = 10L * TicksPerSecond;
-        internal const long TicksPer2Min = 2 * 60 * TicksPerSecond;
+        internal const long TicksPer5Sec = 5L * TicksPerSecond;
+        internal const long TicksPer1Min = 1L * 60 * TicksPerSecond;
         private readonly Model3 canDb;
         private readonly BlockingCollection<IList<Database.Can>> messages;
         private readonly Dictionary<int, ValueBase> values = new Dictionary<int, ValueBase>();
-        private DateTime next10Sec;
-        private DateTime next2Min;
+        private DateTime next1Min;
+        private DateTime next5Sec;
 
         public Sampler(BlockingCollection<IList<Database.Can>> messages)
         {
@@ -45,8 +45,8 @@ namespace TeslaCAN.TeslaLogger
 
         public void Start(DateTime dateTime)
         {
-            next10Sec = new DateTime((dateTime.Ticks / TicksPer10Sec + 1) * TicksPer10Sec);
-            next2Min = new DateTime((dateTime.Ticks / TicksPer2Min + 1) * TicksPer2Min);
+            next5Sec = new DateTime((dateTime.Ticks / TicksPer5Sec + 1) * TicksPer5Sec);
+            next1Min = new DateTime((dateTime.Ticks / TicksPer1Min + 1) * TicksPer1Min);
         }
 
         internal IList<Signal> FindSignals(Frame f)
@@ -80,18 +80,18 @@ namespace TeslaCAN.TeslaLogger
 
         public void CheckExpired(DateTime ts)
         {
-            var expired10s = ts >= next10Sec;
-            var expired2min = ts >= next2Min;
+            var expired10s = ts >= next5Sec;
+            var expired2min = ts >= next1Min;
 
             if (expired10s || expired2min)
             {
-                var rounded = new DateTime(ts.Ticks / TicksPer10Sec * TicksPer10Sec);
+                var rounded = new DateTime(ts.Ticks / TicksPer5Sec * TicksPer5Sec);
                 var list = GetFields(rounded, expired2min).ToList();
                 if (list.Count > 0)
                     messages.Add(list);
 
-                if (expired10s) next10Sec = new DateTime((ts.Ticks / TicksPer10Sec + 1) * TicksPer10Sec);
-                if (expired2min) next2Min = new DateTime((ts.Ticks / TicksPer2Min + 1) * TicksPer2Min);
+                if (expired10s) next5Sec = new DateTime((ts.Ticks / TicksPer5Sec + 1) * TicksPer5Sec);
+                if (expired2min) next1Min = new DateTime((ts.Ticks / TicksPer1Min + 1) * TicksPer1Min);
 
                 if (expired2min && values.Any(kvp => kvp.Value.HasValue))
                 {
@@ -101,7 +101,7 @@ namespace TeslaCAN.TeslaLogger
             }
         }
 
-        private ValueBase FindValue(DbId dbId)
+        internal ValueBase FindValue(DbId dbId)
         {
             return values.TryGetValue((int) dbId, out var val) && val.HasValue ? val : null;
         }
@@ -111,32 +111,66 @@ namespace TeslaCAN.TeslaLogger
             if (expired1Min)
             {
                 var cellTempMin = FindValue(DbId.CellTempMin);
+                var cellTempMinNum = FindValue(DbId.CellTempMinNum);
                 var cellTempMax = FindValue(DbId.CellTempMax);
+                var cellTempMaxNum = FindValue(DbId.CellTempMaxNum);
 
                 if (cellTempMin != null)
+                {
                     yield return new Database.Can(time, DbId.CellTempMin, cellTempMin.Min);
+
+                    if (cellTempMinNum != null)
+                        yield return new Database.Can(time, DbId.CellTempMinNum,
+                            cellTempMinNum.AtIndex(cellTempMin.MinIndex));
+                }
+
                 if (cellTempMin != null && cellTempMax != null)
                     yield return new Database.Can(time, DbId.CellTempMid, (cellTempMin.Min + cellTempMax.Max) / 2.0);
                 if (cellTempMax != null)
+                {
                     yield return new Database.Can(time, DbId.CellTempMax, cellTempMax.Max);
 
+                    if (cellTempMaxNum != null)
+                        yield return new Database.Can(time, DbId.CellTempMaxNum,
+                            cellTempMaxNum.AtIndex(cellTempMax.MaxIndex));
+                }
+
                 cellTempMin?.Reset();
+                cellTempMinNum?.Reset();
                 cellTempMax?.Reset();
+                cellTempMaxNum?.Reset();
             }
 
             {
                 var voltageMin = FindValue(DbId.CellVoltMin);
+                var voltageMinNum = FindValue(DbId.CellVoltMinNum);
                 var voltageMax = FindValue(DbId.CellVoltMax);
+                var voltageMaxNum = FindValue(DbId.CellVoltMaxNum);
 
                 if (voltageMin != null)
+                {
                     yield return new Database.Can(time, DbId.CellVoltMin, voltageMin.Min);
+
+                    if (voltageMinNum != null)
+                        yield return new Database.Can(time, DbId.CellVoltMinNum,
+                            voltageMinNum.AtIndex(voltageMin.MinIndex));
+                }
+
                 if (voltageMin != null && voltageMax != null)
                     yield return new Database.Can(time, DbId.CellVoltMid, (voltageMin.Max + voltageMax.Min) / 2.0);
                 if (voltageMax != null)
+                {
                     yield return new Database.Can(time, DbId.CellVoltMax, voltageMax.Max);
 
+                    if (voltageMaxNum != null)
+                        yield return new Database.Can(time, DbId.CellVoltMaxNum,
+                            voltageMaxNum.AtIndex(voltageMax.MaxIndex));
+                }
+
                 voltageMin?.Reset();
+                voltageMinNum?.Reset();
                 voltageMax?.Reset();
+                voltageMaxNum?.Reset();
             }
 
             var v = FindValue(DbId.Odometer);

@@ -54,11 +54,13 @@ namespace TeslaCAN.TeslaLogger
             get { return Values.Select(i => (double) i).Sum() / Values.Count * Signal.Factor + Signal.Offset; }
         }
 
-        public override double Min => (Signal.Factor < 0 ? Values.Max() : Values.Min()) * Signal.Factor + Signal.Offset;
+        public override int MinIndex => Signal.Factor < 0 ? Values.IndexOf(Values.Max()) : Values.IndexOf(Values.Min());
 
-        public override double Max => (Signal.Factor < 0 ? Values.Min() : Values.Max()) * Signal.Factor + Signal.Offset;
+        public override int MaxIndex => Signal.Factor < 0 ? Values.IndexOf(Values.Min()) : Values.IndexOf(Values.Max());
 
         public override double Last => Values.Last() * Signal.Factor + Signal.Offset;
+
+        public override double AtIndex(int index) => Values[index] * Signal.Factor + Signal.Offset;
 
         public override void Reset()
         {

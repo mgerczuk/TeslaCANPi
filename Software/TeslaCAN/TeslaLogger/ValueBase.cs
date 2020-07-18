@@ -34,11 +34,17 @@ namespace TeslaCAN.TeslaLogger
 
         public abstract double Mean { get; }
 
-        public abstract double Min { get; }
+        public double Min => AtIndex(MinIndex);
 
-        public abstract double Max { get; }
+        public abstract int MinIndex { get; }
+
+        public abstract int MaxIndex { get; }
+
+        public double Max => AtIndex(MaxIndex);
 
         public abstract double Last { get; }
+
+        public abstract double AtIndex(int index);
 
         public abstract void Reset();
 

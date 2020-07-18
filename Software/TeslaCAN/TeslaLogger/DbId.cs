@@ -20,12 +20,16 @@ namespace TeslaCAN.TeslaLogger
     public enum DbId
     {
         CellTempMin = 1,
+        CellTempMinNum = 42001,
         CellTempMid = 2,
         CellTempMax = 3,
+        CellTempMaxNum = 42003,
         CellTempDiff = 4,
         CellVoltMin = 5,
+        CellVoltMinNum = 42005,
         CellVoltMid = 6,
         CellVoltMax = 7,
+        CellVoltMaxNum = 42007,
         CellDiff = 8,
         AC_ChargeTotal = 9,
         DC_ChargeTotal = 11,
