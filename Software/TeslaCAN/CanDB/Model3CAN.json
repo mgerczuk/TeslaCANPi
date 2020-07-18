@@ -52,6 +52,7 @@
         {
           "Signal": {
             "Name": "DI_accelPedalPos",
+            "TeslaloggerDbKey": 404,
             "SignalType": "Unsigned",
             "BitPos": 32,
             "BitSize": 8,
@@ -59,8 +60,7 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 100.0,
-            "Unit": "%",
-            "TeslaloggerDbKey": 404
+            "Unit": "%"
           }
         }
       ]
@@ -104,6 +104,7 @@
         {
           "Signal": {
             "Name": "BattVoltage",
+            "TeslaloggerDbKey": 30,
             "SignalType": "Unsigned",
             "BitPos": 0,
             "BitSize": 16,
@@ -111,13 +112,13 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 655.35,
-            "Unit": "V",
-            "TeslaloggerDbKey": 30
+            "Unit": "V"
           }
         },
         {
           "Signal": {
             "Name": "SmoothBattCurrent",
+            "TeslaloggerDbKey": 44,
             "SignalType": "Signed",
             "BitPos": 16,
             "BitSize": 16,
@@ -125,8 +126,7 @@
             "Offset": 0.0,
             "Minimum": -3276.7,
             "Maximum": 3276.7,
-            "Unit": "A",
-            "TeslaloggerDbKey": 44
+            "Unit": "A"
           }
         }
       ]
@@ -170,6 +170,7 @@
         {
           "Signal": {
             "Name": "FrontTorque",
+            "TeslaloggerDbKey": 400,
             "SignalType": "Signed",
             "BitPos": 24,
             "BitSize": 13,
@@ -177,8 +178,7 @@
             "Offset": 0.0,
             "Minimum": -1024.0,
             "Maximum": 1023.75,
-            "Unit": "NM",
-            "TeslaloggerDbKey": 400
+            "Unit": "NM"
           }
         }
       ]
@@ -190,6 +190,7 @@
         {
           "Signal": {
             "Name": "RearTorque",
+            "TeslaloggerDbKey": 403,
             "SignalType": "Signed",
             "BitPos": 24,
             "BitSize": 13,
@@ -197,8 +198,7 @@
             "Offset": 0.0,
             "Minimum": -1024.0,
             "Maximum": 1023.75,
-            "Unit": "NM",
-            "TeslaloggerDbKey": 403
+            "Unit": "NM"
           }
         }
       ]
@@ -268,6 +268,7 @@
         {
           "Signal": {
             "Name": "VCFRONT_coolantFlowBatActual",
+            "TeslaloggerDbKey": 445,
             "SignalType": "Unsigned",
             "BitPos": 0,
             "BitSize": 9,
@@ -275,13 +276,13 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 40.0,
-            "Unit": "LPM",
-            "TeslaloggerDbKey": 445
+            "Unit": "LPM"
           }
         },
         {
           "Signal": {
             "Name": "VCFRONT_coolantFlowPTActual",
+            "TeslaloggerDbKey": 444,
             "SignalType": "Unsigned",
             "BitPos": 22,
             "BitSize": 9,
@@ -289,8 +290,7 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 40.0,
-            "Unit": "LPM",
-            "TeslaloggerDbKey": 444
+            "Unit": "LPM"
           }
         }
       ]
@@ -315,6 +315,7 @@
         {
           "Signal": {
             "Name": "BMS_maxDischargePower",
+            "TeslaloggerDbKey": 29,
             "SignalType": "Unsigned",
             "BitPos": 16,
             "BitSize": 16,
@@ -322,8 +323,7 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 655.35,
-            "Unit": "kW",
-            "TeslaloggerDbKey": 29
+            "Unit": "kW"
           }
         }
       ]
@@ -335,6 +335,7 @@
         {
           "Signal": {
             "Name": "UIspeed_signed",
+            "TeslaloggerDbKey": 442,
             "SignalType": "Unsigned",
             "BitPos": 12,
             "BitSize": 12,
@@ -342,8 +343,7 @@
             "Offset": -40.0,
             "Minimum": -40.0,
             "Maximum": 287.6,
-            "Unit": "KPH",
-            "TeslaloggerDbKey": 442
+            "Unit": "KPH"
           }
         }
       ]
@@ -413,6 +413,7 @@
         {
           "Signal": {
             "Name": "RearPower",
+            "TeslaloggerDbKey": 415,
             "SignalType": "Signed",
             "BitPos": 0,
             "BitSize": 11,
@@ -420,8 +421,7 @@
             "Offset": 0.0,
             "Minimum": -500.0,
             "Maximum": 500.0,
-            "Unit": "kW",
-            "TeslaloggerDbKey": 415
+            "Unit": "kW"
           }
         }
       ]
@@ -433,6 +433,7 @@
         {
           "Signal": {
             "Name": "SOCmin",
+            "TeslaloggerDbKey": 25,
             "SignalType": "Unsigned",
             "BitPos": 0,
             "BitSize": 10,
@@ -440,13 +441,13 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 102.3,
-            "Unit": "%",
-            "TeslaloggerDbKey": 25
+            "Unit": "%"
           }
         },
         {
           "Signal": {
             "Name": "SOCUI",
+            "TeslaloggerDbKey": 24,
             "SignalType": "Unsigned",
             "BitPos": 10,
             "BitSize": 10,
@@ -454,8 +455,7 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 102.3,
-            "Unit": "%",
-            "TeslaloggerDbKey": 24
+            "Unit": "%"
           }
         },
         {
@@ -608,6 +608,7 @@
         {
           "Signal": {
             "Name": "FrontPower",
+            "TeslaloggerDbKey": 405,
             "SignalType": "Signed",
             "BitPos": 0,
             "BitSize": 11,
@@ -615,8 +616,7 @@
             "Offset": 0.0,
             "Minimum": -512.0,
             "Maximum": 511.5,
-            "Unit": "kW",
-            "TeslaloggerDbKey": 405
+            "Unit": "kW"
           }
         }
       ]
@@ -654,6 +654,7 @@
         {
           "Signal": {
             "Name": "RearTempStator",
+            "TeslaloggerDbKey": 429,
             "SignalType": "Unsigned",
             "BitPos": 16,
             "BitSize": 8,
@@ -661,8 +662,7 @@
             "Offset": -40.0,
             "Minimum": -40.0,
             "Maximum": 215.0,
-            "Unit": "C",
-            "TeslaloggerDbKey": 429
+            "Unit": "C"
           }
         },
         {
@@ -687,6 +687,7 @@
         {
           "Signal": {
             "Name": "VCFRONT_tempCoolantBatInlet",
+            "TeslaloggerDbKey": 64,
             "SignalType": "Unsigned",
             "BitPos": 0,
             "BitSize": 10,
@@ -694,13 +695,13 @@
             "Offset": -40.0,
             "Minimum": -40.0,
             "Maximum": 85.0,
-            "Unit": "C",
-            "TeslaloggerDbKey": 64
+            "Unit": "C"
           }
         },
         {
           "Signal": {
             "Name": "VCFRONT_tempCoolantPTInlet",
+            "TeslaloggerDbKey": 80,
             "SignalType": "Unsigned",
             "BitPos": 10,
             "BitSize": 11,
@@ -708,13 +709,13 @@
             "Offset": -40.0,
             "Minimum": -40.0,
             "Maximum": 200.0,
-            "Unit": "C",
-            "TeslaloggerDbKey": 80
+            "Unit": "C"
           }
         },
         {
           "Signal": {
             "Name": "VCFRONT_tempAmbient",
+            "TeslaloggerDbKey": 61,
             "SignalType": "Unsigned",
             "BitPos": 24,
             "BitSize": 8,
@@ -722,13 +723,13 @@
             "Offset": -40.0,
             "Minimum": -40.0,
             "Maximum": 80.0,
-            "Unit": "C",
-            "TeslaloggerDbKey": 61
+            "Unit": "C"
           }
         },
         {
           "Signal": {
             "Name": "VCFRONT_tempAmbientFiltered",
+            "TeslaloggerDbKey": 59,
             "SignalType": "Unsigned",
             "BitPos": 40,
             "BitSize": 8,
@@ -736,8 +737,7 @@
             "Offset": -40.0,
             "Minimum": -40.0,
             "Maximum": 80.0,
-            "Unit": "C",
-            "TeslaloggerDbKey": 59
+            "Unit": "C"
           }
         }
       ]
@@ -752,7 +752,32 @@
             "SignalValue": 0,
             "Signals": [
               {
+                "Name": "BattCellTempMaxNum",
+                "TeslaloggerDbKey": 42003,
+                "SignalType": "Unsigned",
+                "BitPos": 2,
+                "BitSize": 4,
+                "Factor": 1.0,
+                "Offset": 0.0,
+                "Minimum": 0.0,
+                "Maximum": 0.0,
+                "Unit": ""
+              },
+              {
+                "Name": "BattCellTempMinNum",
+                "TeslaloggerDbKey": 42001,
+                "SignalType": "Unsigned",
+                "BitPos": 8,
+                "BitSize": 4,
+                "Factor": 1.0,
+                "Offset": 0.0,
+                "Minimum": 0.0,
+                "Maximum": 0.0,
+                "Unit": ""
+              },
+              {
                 "Name": "BattCellTempMax",
+                "TeslaloggerDbKey": 3,
                 "SignalType": "Unsigned",
                 "BitPos": 16,
                 "BitSize": 8,
@@ -760,11 +785,11 @@
                 "Offset": -40.0,
                 "Minimum": 0.0,
                 "Maximum": 0.0,
-                "Unit": "C",
-                "TeslaloggerDbKey": 3
+                "Unit": "C"
               },
               {
                 "Name": "BattCellTempMin",
+                "TeslaloggerDbKey": 1,
                 "SignalType": "Unsigned",
                 "BitPos": 24,
                 "BitSize": 8,
@@ -772,8 +797,7 @@
                 "Offset": -40.0,
                 "Minimum": 0.0,
                 "Maximum": 0.0,
-                "Unit": "C",
-                "TeslaloggerDbKey": 1
+                "Unit": "C"
               }
             ]
           }
@@ -785,6 +809,7 @@
             "Signals": [
               {
                 "Name": "BattCellBrickVoltageMax",
+                "TeslaloggerDbKey": 7,
                 "SignalType": "Unsigned",
                 "BitPos": 2,
                 "BitSize": 12,
@@ -792,11 +817,11 @@
                 "Offset": 0.0,
                 "Minimum": 0.0,
                 "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 7
+                "Unit": "V"
               },
               {
                 "Name": "BattCellBrickVoltageMin",
+                "TeslaloggerDbKey": 5,
                 "SignalType": "Unsigned",
                 "BitPos": 16,
                 "BitSize": 12,
@@ -804,8 +829,31 @@
                 "Offset": 0.0,
                 "Minimum": 0.0,
                 "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 5
+                "Unit": "V"
+              },
+              {
+                "Name": "BattCellBrickVoltageMaxNum",
+                "TeslaloggerDbKey": 42007,
+                "SignalType": "Unsigned",
+                "BitPos": 32,
+                "BitSize": 7,
+                "Factor": 1.0,
+                "Offset": 1.0,
+                "Minimum": 0.0,
+                "Maximum": 0.0,
+                "Unit": ""
+              },
+              {
+                "Name": "BattCellBrickVoltageMinNum",
+                "TeslaloggerDbKey": 42005,
+                "SignalType": "Unsigned",
+                "BitPos": 40,
+                "BitSize": 7,
+                "Factor": 1.0,
+                "Offset": 1.0,
+                "Minimum": 0.0,
+                "Maximum": 0.0,
+                "Unit": ""
               }
             ]
           }
@@ -832,6 +880,7 @@
         {
           "Signal": {
             "Name": "BfullKWhNom",
+            "TeslaloggerDbKey": 71,
             "SignalType": "Unsigned",
             "BitPos": 0,
             "BitSize": 10,
@@ -839,13 +888,13 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 102.3,
-            "Unit": "kWh",
-            "TeslaloggerDbKey": 71
+            "Unit": "kWh"
           }
         },
         {
           "Signal": {
             "Name": "BremainingKWhNom",
+            "TeslaloggerDbKey": 72,
             "SignalType": "Unsigned",
             "BitPos": 10,
             "BitSize": 10,
@@ -853,13 +902,13 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 102.3,
-            "Unit": "kWh",
-            "TeslaloggerDbKey": 72
+            "Unit": "kWh"
           }
         },
         {
           "Signal": {
             "Name": "BexpectedremainKWh",
+            "TeslaloggerDbKey": 74,
             "SignalType": "Unsigned",
             "BitPos": 20,
             "BitSize": 10,
@@ -867,13 +916,13 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 102.3,
-            "Unit": "kWh",
-            "TeslaloggerDbKey": 74
+            "Unit": "kWh"
           }
         },
         {
           "Signal": {
             "Name": "BidealremainKWh",
+            "TeslaloggerDbKey": 75,
             "SignalType": "Unsigned",
             "BitPos": 30,
             "BitSize": 10,
@@ -881,13 +930,13 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 102.3,
-            "Unit": "kWh",
-            "TeslaloggerDbKey": 75
+            "Unit": "kWh"
           }
         },
         {
           "Signal": {
             "Name": "BbufferKWh",
+            "TeslaloggerDbKey": 87,
             "SignalType": "Unsigned",
             "BitPos": 50,
             "BitSize": 8,
@@ -895,8 +944,7 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 25.5,
-            "Unit": "kWh",
-            "TeslaloggerDbKey": 87
+            "Unit": "kWh"
           }
         }
       ]
@@ -934,6 +982,7 @@
         {
           "Signal": {
             "Name": "TempStator",
+            "TeslaloggerDbKey": 443,
             "SignalType": "Unsigned",
             "BitPos": 16,
             "BitSize": 8,
@@ -941,8 +990,7 @@
             "Offset": -40.0,
             "Minimum": -40.0,
             "Maximum": 215.0,
-            "Unit": "C",
-            "TeslaloggerDbKey": 443
+            "Unit": "C"
           }
         },
         {
@@ -1034,6 +1082,7 @@
             "Signals": [
               {
                 "Name": "VCFRONT_coolantValveRadBypass",
+                "TeslaloggerDbKey": 69,
                 "SignalType": "Unsigned",
                 "BitPos": 56,
                 "BitSize": 7,
@@ -1041,8 +1090,7 @@
                 "Offset": 0.0,
                 "Minimum": 0.0,
                 "Maximum": 100.0,
-                "Unit": "%",
-                "TeslaloggerDbKey": 69
+                "Unit": "%"
               }
             ]
           }
@@ -1133,6 +1181,7 @@
         {
           "Signal": {
             "Name": "Odometer",
+            "TeslaloggerDbKey": 26,
             "SignalType": "Unsigned",
             "BitPos": 0,
             "BitSize": 32,
@@ -1140,8 +1189,7 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 4294967.294,
-            "Unit": "KM",
-            "TeslaloggerDbKey": 26
+            "Unit": "KM"
           }
         }
       ]
@@ -1153,6 +1201,7 @@
         {
           "Signal": {
             "Name": "TotalDischargeKWh",
+            "TeslaloggerDbKey": 20,
             "SignalType": "Unsigned",
             "BitPos": 0,
             "BitSize": 32,
@@ -1160,13 +1209,13 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 4294967.295,
-            "Unit": "kWh",
-            "TeslaloggerDbKey": 20
+            "Unit": "kWh"
           }
         },
         {
           "Signal": {
             "Name": "TotalChargeKWh",
+            "TeslaloggerDbKey": 13,
             "SignalType": "Unsigned",
             "BitPos": 32,
             "BitSize": 32,
@@ -1174,8 +1223,7 @@
             "Offset": 0.0,
             "Minimum": 0.0,
             "Maximum": 4294967.295,
-            "Unit": "kWh",
-            "TeslaloggerDbKey": 13
+            "Unit": "kWh"
           }
         }
       ]
@@ -1191,6 +1239,7 @@
             "Signals": [
               {
                 "Name": "BMStotalACcharge",
+                "TeslaloggerDbKey": 9,
                 "SignalType": "Unsigned",
                 "BitPos": 8,
                 "BitSize": 32,
@@ -1198,8 +1247,7 @@
                 "Offset": 0.0,
                 "Minimum": 0.0,
                 "Maximum": 4294967.295,
-                "Unit": "KWh",
-                "TeslaloggerDbKey": 9
+                "Unit": "KWh"
               }
             ]
           }
@@ -1211,6 +1259,7 @@
             "Signals": [
               {
                 "Name": "BMStotalDCcharge",
+                "TeslaloggerDbKey": 11,
                 "SignalType": "Unsigned",
                 "BitPos": 8,
                 "BitSize": 32,
@@ -1218,8 +1267,7 @@
                 "Offset": 0.0,
                 "Minimum": 0.0,
                 "Maximum": 4294967.295,
-                "Unit": "KWh",
-                "TeslaloggerDbKey": 11
+                "Unit": "KWh"
               }
             ]
           }
@@ -1231,6 +1279,7 @@
             "Signals": [
               {
                 "Name": "BMStotalRegenCharge",
+                "TeslaloggerDbKey": 16,
                 "SignalType": "Unsigned",
                 "BitPos": 8,
                 "BitSize": 32,
@@ -1238,8 +1287,7 @@
                 "Offset": 0.0,
                 "Minimum": 0.0,
                 "Maximum": 4294967.295,
-                "Unit": "KWh",
-                "TeslaloggerDbKey": 16
+                "Unit": "KWh"
               }
             ]
           }
@@ -1332,1620 +1380,6 @@
             "Minimum": 0.0,
             "Maximum": 0.0,
             "Unit": "C"
-          }
-        }
-      ]
-    },
-    {
-      "Id": 1025,
-      "Name": "CellVoltages",
-      "SignalOrMuxes": [
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 0,
-            "Signals": [
-              {
-                "Name": "StatusFlags",
-                "SignalType": "Unsigned",
-                "BitPos": 8,
-                "BitSize": 8,
-                "Factor": 1.0,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": ""
-              },
-              {
-                "Name": "Cell0",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 101
-              },
-              {
-                "Name": "Cell1",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 102
-              },
-              {
-                "Name": "Cell2",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 103
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 1,
-            "Signals": [
-              {
-                "Name": "Cell3",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 104
-              },
-              {
-                "Name": "Cell4",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 105
-              },
-              {
-                "Name": "Cell5",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 106
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 2,
-            "Signals": [
-              {
-                "Name": "Cell6",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 107
-              },
-              {
-                "Name": "Cell7",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 108
-              },
-              {
-                "Name": "Cell8",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 109
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 3,
-            "Signals": [
-              {
-                "Name": "Cell9",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 110
-              },
-              {
-                "Name": "Cell10",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 111
-              },
-              {
-                "Name": "Cell11",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 112
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 4,
-            "Signals": [
-              {
-                "Name": "Cell12",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 113
-              },
-              {
-                "Name": "Cell13",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 114
-              },
-              {
-                "Name": "Cell14",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 115
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 5,
-            "Signals": [
-              {
-                "Name": "Cell15",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 116
-              },
-              {
-                "Name": "Cell16",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 117
-              },
-              {
-                "Name": "Cell17",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 118
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 6,
-            "Signals": [
-              {
-                "Name": "Cell18",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 119
-              },
-              {
-                "Name": "Cell19",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 120
-              },
-              {
-                "Name": "Cell20",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 121
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 7,
-            "Signals": [
-              {
-                "Name": "Cell21",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 122
-              },
-              {
-                "Name": "Cell22",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 123
-              },
-              {
-                "Name": "Cell23",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 124
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 8,
-            "Signals": [
-              {
-                "Name": "Cell24",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 125
-              },
-              {
-                "Name": "Cell25",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 126
-              },
-              {
-                "Name": "Cell26",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 127
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 9,
-            "Signals": [
-              {
-                "Name": "Cell27",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 128
-              },
-              {
-                "Name": "Cell28",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 129
-              },
-              {
-                "Name": "Cell29",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 130
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 10,
-            "Signals": [
-              {
-                "Name": "Cell30",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 131
-              },
-              {
-                "Name": "Cell31",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 132
-              },
-              {
-                "Name": "Cell32",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 133
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 11,
-            "Signals": [
-              {
-                "Name": "Cell34",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 134
-              },
-              {
-                "Name": "Cell33",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 135
-              },
-              {
-                "Name": "Cell35",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 136
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 12,
-            "Signals": [
-              {
-                "Name": "Cell36",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 137
-              },
-              {
-                "Name": "Cell37",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 138
-              },
-              {
-                "Name": "Cell38",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 139
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 13,
-            "Signals": [
-              {
-                "Name": "Cell39",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 140
-              },
-              {
-                "Name": "Cell40",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 141
-              },
-              {
-                "Name": "Cell41",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 142
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 14,
-            "Signals": [
-              {
-                "Name": "Cell42",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 143
-              },
-              {
-                "Name": "Cell43",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 144
-              },
-              {
-                "Name": "Cell44",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 145
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 15,
-            "Signals": [
-              {
-                "Name": "Cell45",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 146
-              },
-              {
-                "Name": "Cell46",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 147
-              },
-              {
-                "Name": "Cell47",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 148
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 16,
-            "Signals": [
-              {
-                "Name": "Cell48",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 149
-              },
-              {
-                "Name": "Cell49",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 150
-              },
-              {
-                "Name": "Cell50",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 151
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 17,
-            "Signals": [
-              {
-                "Name": "Cell51",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 152
-              },
-              {
-                "Name": "Cell52",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 153
-              },
-              {
-                "Name": "Cell53",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 154
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 18,
-            "Signals": [
-              {
-                "Name": "Cell54",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 155
-              },
-              {
-                "Name": "Cell55",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 156
-              },
-              {
-                "Name": "Cell56",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 157
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 19,
-            "Signals": [
-              {
-                "Name": "Cell57",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 158
-              },
-              {
-                "Name": "Cell58",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 159
-              },
-              {
-                "Name": "Cell59",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 160
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 20,
-            "Signals": [
-              {
-                "Name": "Cell60",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 161
-              },
-              {
-                "Name": "Cell61",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 162
-              },
-              {
-                "Name": "Cell62",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 163
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 21,
-            "Signals": [
-              {
-                "Name": "Cell63",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 164
-              },
-              {
-                "Name": "Cell64",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 165
-              },
-              {
-                "Name": "Cell65",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 166
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 22,
-            "Signals": [
-              {
-                "Name": "Cell66",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 167
-              },
-              {
-                "Name": "Cell67",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 168
-              },
-              {
-                "Name": "Cell68",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 169
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 23,
-            "Signals": [
-              {
-                "Name": "Cell69",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 170
-              },
-              {
-                "Name": "Cell70",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 171
-              },
-              {
-                "Name": "Cell71",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 172
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 24,
-            "Signals": [
-              {
-                "Name": "Cell72",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 173
-              },
-              {
-                "Name": "Cell73",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 174
-              },
-              {
-                "Name": "Cell74",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 175
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 25,
-            "Signals": [
-              {
-                "Name": "Cell75",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 176
-              },
-              {
-                "Name": "Cell76",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 177
-              },
-              {
-                "Name": "Cell77",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 178
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 26,
-            "Signals": [
-              {
-                "Name": "Cell78",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 179
-              },
-              {
-                "Name": "Cell79",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 180
-              },
-              {
-                "Name": "Cell80",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 181
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 27,
-            "Signals": [
-              {
-                "Name": "Cell81",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 182
-              },
-              {
-                "Name": "Cell82",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 183
-              },
-              {
-                "Name": "Cell83",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 184
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 28,
-            "Signals": [
-              {
-                "Name": "Cell84",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 185
-              },
-              {
-                "Name": "Cell85",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 186
-              },
-              {
-                "Name": "Cell86",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 187
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 29,
-            "Signals": [
-              {
-                "Name": "Cell87",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 188
-              },
-              {
-                "Name": "Cell88",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 189
-              },
-              {
-                "Name": "Cell89",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 190
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 30,
-            "Signals": [
-              {
-                "Name": "Cell90",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 191
-              },
-              {
-                "Name": "Cell91",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 192
-              },
-              {
-                "Name": "Cell92",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 193
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 31,
-            "Signals": [
-              {
-                "Name": "Cell93",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 194
-              },
-              {
-                "Name": "Cell94",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 195
-              },
-              {
-                "Name": "Cell95",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 196
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 32,
-            "Signals": [
-              {
-                "Name": "Cell96",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 197
-              },
-              {
-                "Name": "Cell97",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 198
-              },
-              {
-                "Name": "Cell98",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 199
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 33,
-            "Signals": [
-              {
-                "Name": "Cell99",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 200
-              },
-              {
-                "Name": "Cell100",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey":201
-              },
-              {
-                "Name": "Cell101",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 202
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 34,
-            "Signals": [
-              {
-                "Name": "Cell102",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 203
-              },
-              {
-                "Name": "Cell103",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 204
-              },
-              {
-                "Name": "Cell104",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 205
-              }
-            ]
-          }
-        },
-        {
-          "Multiplex": {
-            "SignalName": "MultiplexSelector",
-            "SignalValue": 35,
-            "Signals": [
-              {
-                "Name": "Cell105",
-                "SignalType": "Unsigned",
-                "BitPos": 16,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 206
-              },
-              {
-                "Name": "Cell106",
-                "SignalType": "Unsigned",
-                "BitPos": 32,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 207
-              },
-              {
-                "Name": "Cell107",
-                "SignalType": "Unsigned",
-                "BitPos": 48,
-                "BitSize": 16,
-                "Factor": 0.0001,
-                "Offset": 0.0,
-                "Minimum": 0.0,
-                "Maximum": 0.0,
-                "Unit": "V",
-                "TeslaloggerDbKey": 208
-              }
-            ]
-          }
-        },
-        {
-          "Signal": {
-            "Name": "MultiplexSelector",
-            "SignalType": "Unsigned",
-            "BitPos": 0,
-            "BitSize": 8,
-            "Factor": 1.0,
-            "Offset": 0.0,
-            "Minimum": 0.0,
-            "Maximum": 0.0,
-            "Unit": ""
           }
         }
       ]

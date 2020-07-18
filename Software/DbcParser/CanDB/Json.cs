@@ -90,6 +90,8 @@ namespace TeslaCAN.CanDB
     {
         public string Name { get; set; }
 
+        public int TeslaloggerDbKey { get; set; }
+
         [JsonConverter(typeof(StringEnumConverter))]
         public SignalType SignalType { get; set; }
 
@@ -106,8 +108,6 @@ namespace TeslaCAN.CanDB
         public double Maximum { get; set; }
 
         public string Unit { get; set; }
-
-        public int TeslaloggerDbKey { get; set; }
 
         public bool ShouldSerializeTeslaloggerDbKey()
         {
