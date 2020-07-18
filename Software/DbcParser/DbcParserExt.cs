@@ -15,6 +15,8 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+using System.Globalization;
+
 namespace Dbc
 {
     public partial class DbcParser
@@ -26,7 +28,7 @@ namespace Dbc
                 var s = GetText();
                 if (s.StartsWith("."))
                     s = "0" + s;
-                return double.Parse(s);
+                return double.Parse(s, CultureInfo.InvariantCulture);
             }
         }
 

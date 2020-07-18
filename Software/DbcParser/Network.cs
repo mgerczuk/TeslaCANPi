@@ -45,7 +45,8 @@ namespace DbcParse
 
     internal class NetworkNodeTxMessageSignal
     {
-        public NetworkNodeTxMessageSignal(DbcParser.DbcContext dbc, DbcParser.SignalContext signalContext)
+        public NetworkNodeTxMessageSignal(DbcParser.DbcContext dbc, DbcParser.SignalContext signalContext,
+            DbcParser.MsgContext msg)
         {
             Name = signalContext.name.Text;
             Bitposition = byte.Parse(signalContext.startBit.Text);
@@ -56,6 +57,10 @@ namespace DbcParse
             Minimum = signalContext.min?.ToDouble();
             Maximum = signalContext.max?.ToDouble();
             Unit = signalContext.unit == null ? null : Tools.Strip(signalContext.unit.Text);
+            MultiplexerSignal = msg.signal().FirstOrDefault(s => s!= signalContext && s.mpxIndicator?.Text == "M")?.name.Text;
+            var value = signalContext.mpxIndicator?.Text ?? string.Empty;
+            MultiplexerValue = value.StartsWith("m") ? byte.Parse(value.Substring(1)) : (byte)0;
+            Valuetype = signalContext.signed.Text == "+" ? "Unsigned" : "Signed";
         }
 
         public string Name { get; }
@@ -66,6 +71,8 @@ namespace DbcParse
 
         public string Byteorder { get; }
 
+        public string Valuetype { get; }
+
         public double Factor { get; }
 
         public double Offset { get; }
@@ -75,6 +82,10 @@ namespace DbcParse
         public double? Maximum { get; }
 
         public string Unit { get; }
+
+        public string MultiplexerSignal { get; }
+
+        public byte MultiplexerValue { get; }
     }
 
     internal class NetworkNodeTxMessage
@@ -82,27 +93,27 @@ namespace DbcParse
         public NetworkNodeTxMessage(DbcParser.DbcContext dbc, DbcParser.MsgContext msg)
         {
             Name = msg.name.Text;
-            ID = msg.id.Text;
+            ID = uint.Parse(msg.id.Text);
             DLC = byte.Parse(msg.length.Text);
 
             Comment = Tools.Strip(dbc.comment()
-                .Where(c => c.msgComment()?.msgId.Text == ID)
+                .Where(c => c.msgComment()?.msgId.Text == ID.ToString())
                 .Select(c => c.msgComment().text.Text)
                 .FirstOrDefault());
 
             Attribute = dbc.attributeValue()
-                .Where(att => att.msgId?.Text == ID && att.signalName == null)
+                .Where(att => att.msgId?.Text == ID.ToString() && att.signalName == null)
                 .Select(att => new Attribute(att))
                 .ToArray();
 
             Signal = msg.signal()
-                .Select(s => new NetworkNodeTxMessageSignal(dbc, s))
+                .Select(s => new NetworkNodeTxMessageSignal(dbc, s, msg))
                 .ToArray();
         }
 
         public string Name { get; }
 
-        public string ID { get; }
+        public uint ID { get; }
 
         public byte DLC { get; }
 
