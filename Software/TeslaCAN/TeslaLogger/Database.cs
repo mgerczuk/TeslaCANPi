@@ -81,6 +81,51 @@ namespace TeslaCAN.TeslaLogger
             }
         }
 
+        public List<Can> GetOldestRecords(int limit)
+        {
+            lock (dbLock)
+            {
+                var records =
+                    db.Query<Can>(
+                        $"SELECT * FROM {typeof(Can).Name} WHERE Timestamp IN (SELECT DISTINCT Timestamp FROM {typeof(Can).Name} ORDER BY Timestamp LIMIT {limit})");
+
+                if (records.Count == 0)
+                {
+                    db.Execute($"DELETE FROM sqlite_sequence WHERE name = \"{typeof(Can).Name}\"");
+                }
+
+                return records;
+            }
+        }
+
+        public static UploadData[] GetUploadData(List<Can> records)
+        {
+            var result = records
+                .GroupBy(r => r.Timestamp)
+                .Select(
+                    g =>
+                    {
+                        var d = new UploadData {d = g.Key};
+                        foreach (var can in g)
+                        {
+                            d.dict[((int) can.Id).ToString()] = can.Val;
+                        }
+
+                        return d;
+                    })
+                .ToArray();
+            return result;
+        }
+
+        public void DeleteRecords(List<Can> records)
+        {
+            lock (dbLock)
+            {
+                var keys = string.Join(",", records.Select(r => r.Key.ToString()));
+                db.Execute($"DELETE FROM {typeof(Can).Name} WHERE Key IN ({keys})");
+            }
+        }
+
         private void InsertRecord(Can can)
         {
             for (var retry = true; retry;)

@@ -22,6 +22,7 @@ using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
 using System.Threading;
+using System.Web;
 using ICSharpCode.SharpZipLib.Zip;
 using Newtonsoft.Json;
 
@@ -30,8 +31,8 @@ namespace TeslaCAN.TeslaLogger
     public class HttpServer
     {
         private readonly Database database;
-        private HttpListener httpListener;
         private readonly Thread httpThread;
+        private HttpListener httpListener;
         private bool stopped;
 
         public HttpServer(Database database)
@@ -43,7 +44,6 @@ namespace TeslaCAN.TeslaLogger
         public void Start()
         {
             httpThread.Start();
-
         }
 
         public void Stop()
@@ -55,7 +55,6 @@ namespace TeslaCAN.TeslaLogger
                 httpListener.Stop();
                 httpThread.Join();
             }
-
         }
 
         private void HttpThreadProc()
@@ -63,6 +62,7 @@ namespace TeslaCAN.TeslaLogger
             try
             {
                 while (!stopped)
+                {
                     try
                     {
                         using (httpListener = new HttpListener {Prefixes = {"http://*:8080/"}})
@@ -72,47 +72,48 @@ namespace TeslaCAN.TeslaLogger
                             while (!stopped)
                             {
                                 var context = httpListener.GetContext();
-                                if (context.Request.Url.AbsolutePath == "/get_scanmytesla" &&
-                                    context.Request.HttpMethod == "POST")
-                                {
-                                    var d = database.GetRecord();
-                                    var responseBody = d == null
-                                        ? "not found"
-                                        : $"0\r\n{DateTime.Now}\r\n{JsonConvert.SerializeObject(d)}";
+                                var ap = context.Request.Url.AbsolutePath;
 
-                                    context.Response.ContentType = "application/json";
-                                    Respond(responseBody, context);
-                                }
-                                else if (context.Request.Url.AbsolutePath == "/" &&
-                                         context.Request.HttpMethod == "GET")
+                                switch (context.Request.HttpMethod)
                                 {
-                                    var ver = Assembly.GetExecutingAssembly().GetName().Version;
-                                    var result = "<!DOCTYPE html> <html> <body>" +
-                                                 $"<h1>TeslaCAN V{ver.Major}.{ver.Minor}.{ver.Build}</h1> " +
-                                                 "<p><a href=\"update\">Update Software</a></p>" +
-                                                 "</body></html>";
+                                    case "POST":
+                                        switch (ap)
+                                        {
+                                            case "/get_scanmytesla":
+                                                GetScanMyTesla(context);
+                                                break;
+                                            default:
+                                                context.Response.StatusCode = 404;
+                                                break;
+                                        }
 
-                                    Respond(result, context);
-                                }
-                                else if (context.Request.Url.AbsolutePath == "/update" &&
-                                         context.Request.HttpMethod == "GET")
-                                {
-                                    var result = "Update Ok";
-                                    try
-                                    {
-                                        Update();
-                                    }
-                                    catch (Exception e)
-                                    {
-                                        Console.WriteLine(e);
-                                        result = e.ToString();
-                                    }
+                                        break;
 
-                                    Respond(result, context);
-                                }
-                                else
-                                {
-                                    context.Response.StatusCode = 404;
+                                    case "GET":
+                                        switch (ap)
+                                        {
+                                            case "/":
+                                                GetIndex(context);
+                                                break;
+                                            case "/w3.css":
+                                                GetStyleSheet(context);
+                                                break;
+                                            case "/update":
+                                                GetUpdate(context);
+                                                break;
+                                            case "/getdata":
+                                                GetData(context);
+                                                break;
+                                            default:
+                                                context.Response.StatusCode = 404;
+                                                break;
+                                        }
+
+                                        break;
+
+                                    default:
+                                        context.Response.StatusCode = 404;
+                                        break;
                                 }
                             }
                         }
@@ -130,6 +131,7 @@ namespace TeslaCAN.TeslaLogger
                         if (e.ErrorCode != 500)
                             throw;
                     }
+                }
             }
             catch (Exception e)
             {
@@ -138,28 +140,129 @@ namespace TeslaCAN.TeslaLogger
             }
         }
 
+        private void GetData(HttpListenerContext context)
+        {
+            try
+            {
+                var limit = 10;
+
+                var ap = context.Request.RawUrl;
+                var inx = ap.IndexOf('?');
+                if (inx >= 0)
+                {
+                    var param = HttpUtility.ParseQueryString(ap.Substring(inx + 1));
+                    var limitParam = param.Get("limit");
+                    if (limitParam != null)
+                        limit = int.Parse(limitParam);
+                }
+
+                var canRecords = database.GetOldestRecords(limit);
+
+                context.Response.ContentType = "application/json";
+                Respond(JsonConvert.SerializeObject(Database.GetUploadData(canRecords)), context);
+
+                // delete data after successful send!
+                database.DeleteRecords(canRecords);
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine(e);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                context.Response.StatusCode = 400;
+                Respond(e.Message, context);
+            }
+        }
+
+        private static void GetStyleSheet(HttpListenerContext context)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            using (var strm = assembly.GetManifestResourceStream("TeslaCAN.www.w3.css"))
+            {
+                context.Response.ContentLength64 = strm.Length;
+                strm.CopyTo(context.Response.OutputStream);
+                context.Response.OutputStream.Close();
+            }
+        }
+
+        private static void GetIndex(HttpListenerContext context)
+        {
+            var ver = Assembly.GetExecutingAssembly().GetName().Version;
+            var result =
+                $@"<!DOCTYPE html> <html>
+                <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
+                <link rel=""stylesheet"" href=""w3.css"">
+                <body>
+                <header class=""w3-container w3-blue-grey w3-center"" style=""padding:128px 16px"">
+                    <h1 class=""w3-margin w3-jumbo"">TeslaCAN</h1>
+                    <p class=""w3-xlarge"">Version {ver.Major}.{ver.Minor}.{ver.Build}</p>
+                    <p class=""w3-button w3-black w3-padding-large w3-large w3-margin-top""><a href=""update"">Update Software</a></p>
+                </header>
+                </body>
+                </html>";
+
+            Respond(result, context);
+        }
+
+        private void GetUpdate(HttpListenerContext context)
+        {
+            var updateResult = "Update Ok";
+            try
+            {
+                var homePath = Environment.GetEnvironmentVariable("HOME");
+                var zipPath = Path.Combine(homePath, "Release.zip");
+
+                using (var client = new WebClient())
+                {
+                    client.DownloadFile(
+                        "https://gitlab.fritz.box/root/teslacan/raw/master/Software/TeslaCAN/Release.zip",
+                        zipPath);
+                }
+
+                var installPath = Path.Combine(homePath, "TeslaCAN");
+                new FastZip().ExtractZip(zipPath, installPath, "");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                updateResult = e.ToString();
+            }
+
+            var result =
+                $@"<!DOCTYPE html> <html>
+                <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
+                <link rel=""stylesheet"" href=""w3.css"">
+                <body>
+                <header class=""w3-container w3-blue-grey w3-center"" style=""padding:128px 16px"">
+                    <h1 class=""w3-margin w3-jumbo"">TeslaCAN</h1>
+                    <p class=""w3-xlarge"">{updateResult}</p>
+                    <p class=""w3-button w3-black w3-padding-large w3-large w3-margin-top""><a href=""/"">Back</a></p>
+                </header>
+                </body>
+                </html>";
+
+            Respond(result, context);
+        }
+
+        private void GetScanMyTesla(HttpListenerContext context)
+        {
+            var d = database.GetRecord();
+            var responseBody = d == null
+                ? "not found"
+                : $"0\r\n{DateTime.Now}\r\n{JsonConvert.SerializeObject(d)}";
+
+            context.Response.ContentType = "application/json";
+            Respond(responseBody, context);
+        }
+
         private static void Respond(string responseBody, HttpListenerContext context)
         {
             var buffer = Encoding.UTF8.GetBytes(responseBody);
             context.Response.ContentLength64 = buffer.Length;
             context.Response.OutputStream.Write(buffer, 0, buffer.Length);
             context.Response.OutputStream.Close();
-        }
-
-        private void Update()
-        {
-            var homePath = Environment.GetEnvironmentVariable("HOME");
-            var zipPath = Path.Combine(homePath, "Release.zip");
-
-            using (var client = new WebClient())
-            {
-                client.DownloadFile(
-                    "https://gitlab.fritz.box/root/teslacan/raw/master/Software/TeslaCAN/Release.zip",
-                    zipPath);
-            }
-
-            var installPath = Path.Combine(homePath, "TeslaCAN");
-            new FastZip().ExtractZip(zipPath, installPath, "");
         }
     }
 }
