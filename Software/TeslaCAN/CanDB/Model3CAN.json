@@ -875,76 +875,76 @@
     },
     {
       "Id": 850,
-      "Name": "BMSenergy",
+      "Name": "BMS_energyStatus",
       "SignalOrMuxes": [
         {
           "Signal": {
-            "Name": "BfullKWhNom",
+            "Name": "BMS_nominalFullPackEnergy",
             "TeslaloggerDbKey": 71,
             "SignalType": "Unsigned",
             "BitPos": 0,
-            "BitSize": 10,
+            "BitSize": 11,
             "Factor": 0.1,
             "Offset": 0.0,
             "Minimum": 0.0,
-            "Maximum": 102.3,
-            "Unit": "kWh"
+            "Maximum": 204.6,
+            "Unit": "KWh"
           }
         },
         {
           "Signal": {
-            "Name": "BremainingKWhNom",
+            "Name": "BMS_nominalEnergyRemaining",
             "TeslaloggerDbKey": 72,
             "SignalType": "Unsigned",
-            "BitPos": 10,
-            "BitSize": 10,
+            "BitPos": 11,
+            "BitSize": 11,
             "Factor": 0.1,
             "Offset": 0.0,
             "Minimum": 0.0,
-            "Maximum": 102.3,
-            "Unit": "kWh"
+            "Maximum": 204.6,
+            "Unit": "KWh"
           }
         },
         {
           "Signal": {
-            "Name": "BexpectedremainKWh",
+            "Name": "BMS_expectedEnergyRemaining",
             "TeslaloggerDbKey": 74,
             "SignalType": "Unsigned",
-            "BitPos": 20,
-            "BitSize": 10,
+            "BitPos": 22,
+            "BitSize": 11,
             "Factor": 0.1,
             "Offset": 0.0,
             "Minimum": 0.0,
-            "Maximum": 102.3,
-            "Unit": "kWh"
+            "Maximum": 204.6,
+            "Unit": "KWh"
           }
         },
         {
           "Signal": {
-            "Name": "BidealremainKWh",
+            "Name": "BMS_idealEnergyRemaining",
             "TeslaloggerDbKey": 75,
             "SignalType": "Unsigned",
-            "BitPos": 30,
-            "BitSize": 10,
+            "BitPos": 33,
+            "BitSize": 11,
             "Factor": 0.1,
             "Offset": 0.0,
             "Minimum": 0.0,
-            "Maximum": 102.3,
-            "Unit": "kWh"
+            "Maximum": 204.6,
+            "Unit": "KWh"
           }
         },
         {
           "Signal": {
-            "Name": "BbufferKWh",
+            "Name": "BMS_energyBuffer",
             "TeslaloggerDbKey": 87,
             "SignalType": "Unsigned",
-            "BitPos": 50,
+            "BitPos": 55,
             "BitSize": 8,
             "Factor": 0.1,
             "Offset": 0.0,
             "Minimum": 0.0,
-            "Maximum": 25.5,
-            "Unit": "kWh"
+            "Maximum": 25.4,
+            "Unit": "KWh"
           }
         }
       ]
