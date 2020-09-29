@@ -113,6 +113,9 @@ namespace TeslaCAN.TeslaLogger
         //Usable remaining = 86,
         EnergyBuffer = 87,
 
+        CellVoltage0 = 101,
+        CellVoltage107 = 208,
+
         FTorque = 400,
 
         //Rr/Fr torque bias = 401,

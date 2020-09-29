@@ -322,6 +322,16 @@ namespace TeslaCAN.TeslaLogger
                 if (v1 != null) yield return new Database.Can(time, DbId.OutsideTemp, v1.Mean);
                 v1?.Reset();
             }
+
+            for (var i = DbId.CellVoltage0; i <= DbId.CellVoltage107; i++)
+            {
+                v = FindValue(i);
+                if (v != null)
+                {
+                    yield return new Database.Can(time, i, v.Last);
+                    v.Reset();
+                }
+            }
         }
     }
 }
