@@ -1,0 +1,10 @@
+[Unit]
+Description=TeslaCAN
+#Requires=bluetooth.target
+
+[Service]
+ExecStart=/home/pi/TeslaCAN/TeslaCAN.exe
+Environment=HOME=/home/pi
+
+[Install]
+WantedBy=multi-user.target
