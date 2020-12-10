@@ -4,6 +4,3 @@
 [submodule "Software/DbcParser/model3dbc"]
 	path = Software/DbcParser/model3dbc
 	url = https://github.com/joshwardell/model3dbc.git
-[submodule "ESP32/TeslaCAN/lib/ESP32CAN"]
-	path = ESP32/TeslaCAN/lib/ESP32CAN
-	url = https://github.com/mgerczuk/ESP32-Arduino-CAN.git
